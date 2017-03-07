@@ -48,8 +48,11 @@ docker images
 ```
 
 ## Run and test your image in a container
+The -ti for "terminal interactive" allows you to use ^C to kill the process.
+The -p 8000:8000 options indicate the exposedPort:internalPort accessiblility.
+The express-helloworld option indicates the image name to create a container.
 ```
-docker run -p 8000:8000 express-helloworld
+docker run -ti -p 8000:8000 express-helloworld
 ```
 Switch to your browser and get: [http://127.0.0.1:8000/](http://127.0.0.1:8000)
 
@@ -93,7 +96,7 @@ Login to your server host. At a terminal window
 git clone https://github.com/chrispauley/docker-express.git
 cd docker-express
 docker build -t express-helloworld .
-docker run -p 8000:8000 express-helloworld
+docker run -ti -p 8000:8000 express-helloworld
 ```
 Make sure your server host port 8000 is accessible and test it:
  [http://192.168.0.84:8000/](http://192.168.0.84:8000/)
