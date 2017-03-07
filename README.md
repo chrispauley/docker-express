@@ -104,3 +104,23 @@ Update a cname record on your domain and your up.
 
 ## Clean Up
 Remember to clean up your containers and images!
+
+
+### Deploy to Docker Hub
+First tag your image with your hub.docker.com user account name:
+```
+docker tag a234b052333a chrispauley/express-helloworld
+docker images
+```
+
+Next, login and push to Docker hub
+```
+docker push chrispauley/express-helloworld
+```
+
+Now you can deploy using a docker pull command on a docker host server.
+Switch to the docker host machine.
+```
+docker run -ti -p 8000:8000 chrispauley/express-helloworld
+```
+Test it from your browser and enjoy. 
