@@ -84,17 +84,20 @@ git init
 git add .
 ## create your github repo
 git remote add origin https://github.com/chrispauley/docker-express.git
-
+git push origin master
 ```
 
 ### Deploy to a Docker Host
 Login to your server host. At a terminal window
 ```
 git clone https://github.com/chrispauley/docker-express.git
+cd docker-express
 docker build -t express-helloworld .
 docker run -p 8000:8000 express-helloworld
 ```
-Make sure your server host port 8000 is accessible.
+Make sure your server host port 8000 is accessible and test it:
+ [http://192.168.0.84:8000/](http://192.168.0.84:8000/)
+Update a cname record on your domain and your up.
 
 ## Clean Up
 Remember to clean up your containers and images!
