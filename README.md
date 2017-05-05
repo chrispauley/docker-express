@@ -4,7 +4,6 @@ This is a bare minimum Expressjs server app that is wrapped in a Docker image.
 
 ## Installation
 Install Docker
-[deploy](#deploy)
 
 Node JS is not required on your development machine, that is part of this image.
 
@@ -91,7 +90,7 @@ git remote add origin https://github.com/chrispauley/docker-express.git
 git push origin master
 ```
 
-### Deploy to a Docker Host <a name="deploy"></a>
+### Deploy to a Docker Host 
 Login to your server host. At a terminal window
 ```
 git clone https://github.com/chrispauley/docker-express.git
